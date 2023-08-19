@@ -2,26 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --border: #363636;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
+
+  height: 100vh;
+  background: #1e1e1e;
+  font-size: 1.2rem;
+  color: #6c7983;
+}
+
+header {
+  padding: 1rem 4rem;
+  width: 100%;
+  min-height: 10vh;
+  background: #262626;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+header h1 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+
+  background: linear-gradient(110.42deg, #cf57a3 29.2%, #27ae60 63.56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input label {
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input label i {
+  font-size: 1.5rem;
+  color: #fff;
 }
